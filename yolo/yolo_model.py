@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from collections import defaultdict
 # Load the trained model
 
-model = YOLO('runs/detect/train/weights/best.pt')
+model = YOLO('runs/detect/train3/weights/best.pt')
 # Run tracking on the video
 video_files = [
     '../videos/test2.mp4'
