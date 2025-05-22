@@ -1,0 +1,17 @@
+# Vehicle-optimized ByteTrack config for YOLOv8
+# Best for: cars, trucks, buses, vans
+# Tuned for highway/traffic scenarios
+
+tracker_type: bytetrack
+track_high_thresh: 0.6      # Higher threshold to ignore small false positives
+track_low_thresh: 0.2       # Lower threshold to recover occluded vehicles
+new_track_thresh: 0.7       # Confident threshold for new tracks
+match_thresh: 0.8           # Slightly lower IoU for large vehicles
+frame_rate: 25              # Standard traffic camera FPS
+track_buffer: 50            # Longer buffer for traffic stops
+min_box_area: 200           # Filters tiny detections (pixels)
+aspect_ratio_thresh: 3.0    # Allows elongated vehicles (trucks/buses)
+motion_model:
+  name: KalmanFilter
+  std_weight_position: 0.1  # Tuned for predictable vehicle motion
+  std_weight_velocity: 0.5
