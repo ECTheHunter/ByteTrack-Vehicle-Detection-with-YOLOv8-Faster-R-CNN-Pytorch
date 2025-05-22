@@ -5,8 +5,7 @@ from collections import defaultdict
 model = YOLO('runs/detect/train/weights/best.pt')
 # Run tracking on the video
 video_files = [
-    '../videos/test1.mp4',
-    '../videos/test2.mp4',
+    '../videos/test2.mp4'
     # add more video paths here
 ]
 
